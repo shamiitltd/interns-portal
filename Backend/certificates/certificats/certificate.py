@@ -1,6 +1,6 @@
 from flask import Flask, request, send_file
-from reportlab.lib.pagesizes import letter   # type: ignore
-from reportlab.pdfgen import canvas  # type: ignore
+from reportlab.lib.pagesizes import letter 
+from reportlab.pdfgen import canvas  
 from io import BytesIO
 
 app = Flask(__name__)
