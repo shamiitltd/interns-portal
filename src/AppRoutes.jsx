@@ -9,6 +9,7 @@ import TeamLeadDashboard from './pages/Dashboard/TeamLeadDashboard';
 import AdminDashboard from './pages/Dashboard/AdminDashboard';
 import AuthenticatedLayout from './components/AuthenticatedLayout';
 import { useAuth } from './contexts/AuthContext';
+import ReportSubmission from './pages/ReportSubmission/ReportSubmission';
 
 function PrivateRoute({ children, allowedRoles }) {
   const { user } = useAuth();
@@ -53,6 +54,11 @@ function AppRoutes() {
       <Route path="/admin-dashboard" element={
         <PrivateRoute allowedRoles={['admin']}>
           <AdminDashboard />
+        </PrivateRoute>
+      } />
+      <Route path="/submit-report" element={
+        <PrivateRoute allowedRoles={['intern', 'scrummaster', 'teamlead']}>
+          <ReportSubmission />
         </PrivateRoute>
       } />
       <Route path="*" element={<Navigate to={user ? "/dashboard" : "/login"} />} />
