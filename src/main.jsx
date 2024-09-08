@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import { ThemeProvider } from "./context/ThemeContext.jsx";
@@ -10,3 +11,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </SidebarProvider>
   </ThemeProvider>
 );
+=======
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+>>>>>>> 6dcf52aefb10bcd1817047ad24a34aedcdaa47b7

@@ -1,0 +1,111 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    padding: 0 20px;
+    background-color: #1c1d22; /* Same as sidebar background */
+    color: #f9fafa; /* Light text for contrast */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .portal-title {
+    font-size: 2.2rem;
+    font-weight: Bold;
+    color: #f9fafa;
+    margin-left: 15px;
+  }
+  
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+  
+  .icon {
+    font-size: 1.2rem;
+    color: #f9fafa;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    background-color: #2a2c31;
+    border-radius: 8px;
+    padding: 5px 10px;
+    width: 300px;
+    transition: width 0.3s ease;
+    margin-left: 30px;
+  }
+  
+  .search-container:hover {
+    width: 350px; /* Expand on hover */
+  }
+  
+  .search-icon {
+    margin-right: 10px;
+  }
+  
+  .search-input {
+    background-color: transparent;
+    border: none;
+    color: #f9fafa;
+    outline: none;
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-link {
+    display: flex;
+    align-items: center;
+    margin-right: 45px;
+    color: #f9fafa;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .header-link:hover {
+    color: #607afb;
+  }
+  
+  .header-link .icon {
+    margin-right: 8px;
+  }
+  
+  /* Tooltip styles */
+  :root {
+    --tooltip-background-color: #333;
+    --tooltip-text-color: #fff;
+  }
+
+  /* Custom styles for react-tooltip */
+  .react-tooltip {
+    background-color: var(--tooltip-background-color) !important;
+    color: var(--tooltip-text-color) !important;
+    padding: 8px 12px !important;
+    border-radius: 4px !important;
+    font-size: 14px !important;
+  }
+
+  /* Arrow styles */
+  .react-tooltip-arrow {
+    border-bottom-color: var(--tooltip-background-color) !important;
+  }

@@ -1,0 +1,118 @@
+/* Assuming your header height is 60px. Adjust this value if your header has a different height */
+:root {
+    --header-height: 68px;
+  }
+
+.sidebar {
+    position: fixed;
+    top: var(--header-height); /* Start below the header */
+    left: 0;
+    height: calc(100vh - var(--header-height)); /* Subtract header height from full viewport height */
+    width: 90px; /* Default width for collapsed state */
+    background-color: #1c1d22;
+    transition: width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 0;
+    overflow: hidden;
+    z-index: 1000;
+  }
+  
+  .sidebar.expanded {
+    width: 240px; /* Width for expanded state */
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center; /* Center align icons in collapsed state */
+  }
+  
+  .sidebar.expanded nav ul li {
+    justify-content: flex-start; /* Align icons and text in expanded state */
+  }
+  
+  .sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    color: #f9fafa;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .sidebar nav ul li a:hover,
+  .sidebar nav ul li a.active {
+    background-color: #3a3b3f;
+  }
+  
+  .icon {
+    font-size: 24px;
+    margin-right: 0; /* Remove margin in collapsed state */
+    transition: margin-right 0.3s ease;
+  }
+  
+  .sidebar.expanded .icon {
+    margin-right: 20px; /* Add margin when expanded */
+  }
+  
+  .link-text {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+    transition: opacity 0.3s ease, margin-left 0.3s ease;
+    margin-left: -100px; /* Hide the text out of view in collapsed state */
+  }
+  
+  .sidebar.expanded .link-text {
+    opacity: 1;
+    margin-left: 0;
+  }
+  
+  .sidebar-footer {
+    margin-top: auto;
+    padding: 20px;
+  }
+  
+  .logout-btn {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    color: #f9fafa;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    justify-content: left; /* Center align logout icon in collapsed state */
+  }
+  
+  .sidebar.expanded .logout-btn {
+    justify-content: flex-start; /* Align logout icon and text in expanded state */
+  }
+  
+  .logout-btn:hover {
+    background-color: #3a3b3f;
+  }
+  
+  .logout-btn .icon {
+    margin: 0 0px 10px 0px;
+    transition: margin-right 0.3s ease;
+  }
+  
+  .sidebar.expanded .logout-btn .icon {
+    margin-right: 10px; 
+  }
+  
