@@ -1,0 +1,141 @@
+/* General Styling */
+.profile-container {
+  display: flex;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Arial', sans-serif;
+}
+
+.left-container {
+  width: 30%;
+  text-align: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.right-container {
+  width: 70%;
+  margin-left: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Tabs Styling */
+.tabs {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.tabs button.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.tabs button:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* Tab Content Styling */
+.tab-content {
+  margin-bottom: 40px; /* Extra spacing to ensure the Save button stays below the form */
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  color: #4caf50;
+  margin-bottom: 20px;
+}
+
+.info-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.info-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.info-group input,
+.info-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.info-group input:focus,
+.info-group textarea:focus {
+  border-color: #4caf50;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Save Button Styling */
+.save-btn-container {
+  text-align: right;
+}
+
+.save-btn-container button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.save-btn-container button:hover {
+  background-color: #45a049;
+}
+
+/* Photo Upload */
+.photo-upload {
+  position: relative;
+}
+
+.empty-photo-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin: 0 auto 20px;
+}
+
+.upload-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.upload-button:hover {
+  background-color: #45a049;
+}
