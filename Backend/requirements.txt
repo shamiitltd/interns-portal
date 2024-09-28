@@ -1,0 +1,7 @@
+
+PyJWT
+pytz
+Flask
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-CORS
