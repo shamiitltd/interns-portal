@@ -90,13 +90,14 @@ body, html {
 
 .toggle-password {
     position: absolute;
-    right: 5px;
+    right: -140px;
     top: 40%;
     transform: translateY(-50%);
     background: transparent;
     border: none;
     color: #607AFB;
     cursor: pointer;
+    padding: 1px 1px;
 }
 
 .extra-options {

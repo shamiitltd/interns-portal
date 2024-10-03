@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef } from "react";
-import { ThemeContext } from "../../context/ThemeContext";
-import { LIGHT_THEME } from "../../context/ThemeContext";
+import { ThemeContext } from "../../Contexts/ThemeContext";
+import { LIGHT_THEME } from "../../components/constants/themeConstants";
 import LogoBlue from "../../assets/images/logo_blue.svg";
 import LogoWhite from "../../assets/images/logo_white.svg";
 import {
@@ -19,7 +19,7 @@ import {
 import { GrDocumentPerformance } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import "./Sidebar.scss";
-import { SidebarContext } from "../../context/SidebarContext";
+import { SidebarContext } from "../../Contexts/SidebarContext";
 
 const Sidebar = () => {
   const { theme } = useContext(ThemeContext);

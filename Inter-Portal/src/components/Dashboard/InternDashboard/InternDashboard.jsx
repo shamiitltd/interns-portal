@@ -1,12 +1,16 @@
-import React from 'react';
+import { AreaCards, AreaCharts, AreaTable, AreaTop } from "../../Dashboard";
+import Sidebar from "../../Sidebar/Sidebar";
 
-const InternDashboard = () => {
+const Dashboard = () => {
   return (
-    <div>
-      <h1>Intern Dashboard</h1>
-      {/* Add your admin dashboard content here */}
+    <div className="content-area">
+      <Sidebar/>
+      <AreaTop />
+      <AreaCards />
+      <AreaCharts />
+      <AreaTable />
     </div>
   );
 };
 
-export default InternDashboard;
+export default Dashboard;

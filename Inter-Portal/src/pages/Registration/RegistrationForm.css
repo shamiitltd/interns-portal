@@ -1,22 +1,9 @@
-
-:root {
-  --primary-color: #4a90e2;
-  --secondary-color: #f5a623;
-  --background-color: #f0f4f8;
-  --text-color: #333;
-  --error-color: #e74c3c;
-  --success-color: #2ecc71;
-  --border-radius: 8px;
-}
-
-
-
 .registration-container {
   display: flex;
-  height: 100vh;
-  background: linear-gradient(135deg, #dce1f2, #a89ab8);
+  min-height: 100vh;
+  background: linear-gradient(135deg, #dce1f2, #e9e5ec);
   width: 100%;
-  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   border-radius: 8px;
 }
 
@@ -24,10 +11,11 @@
   flex: 1;
   background-color: #ffffff;
   padding: 2.5rem;
-  /* overflow-y: auto; */
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   width: 100%;
+  max-width: 600px;
   margin: auto;
 }
 
@@ -37,8 +25,8 @@
 }
 
 h2 {
-  color: var(--primary-color);
-  margin-bottom: 1.0rem;
+  color: #4a90e2; /* Primary color */
+  margin-bottom: 1.5rem;
   text-align: center;
   font-size: 2rem;
 }
@@ -51,6 +39,7 @@ label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  color: #333; /* Text color */
 }
 
 input[type="text"],
@@ -60,11 +49,11 @@ input[type="number"],
 input[type="password"],
 select {
   width: 100%;
-  padding: 0.75rem;
+  padding: 10px;
   border: 1px solid #ccc;
-  border-radius: var(--border-radius);
+  border-radius: 5px; /* Border radius */
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="text"]:focus,
@@ -74,24 +63,29 @@ input[type="number"]:focus,
 input[type="password"]:focus,
 select:focus {
   outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+  border-color: #4a90e2; /* Primary color */
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
 }
 
 button {
-  background-color: var(--primary-color);
+  background-color: #4a90e2; /* Primary color */
   color: #ffffff;
   border: none;
-  border-radius: var(--border-radius);
+  border-radius: 5px; /* Border radius */
   padding: 0.75rem 2rem;
-  justify-content: space-between;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  width: 100%;
+  margin-top: 1rem;
 }
 
 button:hover {
   background-color: #3a7bc8;
+}
+
+button:active {
+  transform: translateY(1px);
 }
 
 button:disabled {
@@ -100,14 +94,14 @@ button:disabled {
 }
 
 .error {
-  color: var(--error-color);
+  color: #e74c3c; /* Error color */
   font-size: 0.9rem;
   margin-top: 0.25rem;
 }
 
 .message {
   padding: 1rem;
-  border-radius: var(--border-radius);
+  border-radius: 5px; /* Border radius */
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
@@ -115,12 +109,12 @@ button:disabled {
 }
 
 .message.success {
-  background-color: var(--success-color);
+  background-color: #2ecc71; /* Success color */
   color: #ffffff;
 }
 
 .message.error {
-  background-color: var(--error-color);
+  background-color: #e74c3c; /* Error color */
   color: #ffffff;
 }
 
@@ -130,6 +124,9 @@ button:disabled {
   color: #ffffff;
   font-size: 1rem;
   cursor: pointer;
+  padding: 0;
+  margin: 0;
+  width: auto;
 }
 
 .progress-bar {
@@ -142,7 +139,7 @@ button:disabled {
 
 .progress {
   height: 100%;
-  background-color: var(--primary-color);
+  background-color: #4a90e2; /* Primary color */
   transition: width 0.3s ease;
 }
 
@@ -152,15 +149,15 @@ button:disabled {
 }
 
 .password-strength.weak {
-  color: var(--error-color);
+  color: #e74c3c; /* Error color */
 }
 
 .password-strength.medium {
-  color: var(--secondary-color);
+  color: #f5a623; /* Secondary color */
 }
 
 .password-strength.strong {
-  color: var(--success-color);
+  color: #2ecc71; /* Success color */
 }
 
 .resume-preview {
@@ -168,7 +165,7 @@ button:disabled {
 }
 
 .resume-preview a {
-  color: var(--primary-color);
+  color: #4a90e2; /* Primary color */
   text-decoration: none;
 }
 
@@ -191,11 +188,6 @@ button:disabled {
   input[type="number"],
   input[type="password"],
   select {
-    font-size: 0.9rem;
-  }
-
-  button {
-    width: 100%;
-    margin-top: 0.5rem;
+    font-size: 16px;
   }
 }

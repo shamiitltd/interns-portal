@@ -10,7 +10,7 @@ import logging
 app = Flask(__name__)
 
 # Enable CORS for specific origins
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={r"/api/*": {"origins": "http://localhost:5175"}})
 
 # Set up logging
 logging.basicConfig(level=logging.DEBUG)
