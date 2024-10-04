@@ -1,0 +1,40 @@
+.notice-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.notice-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.notice-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.notice-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.notice-date {
+  color: #6c757d;
+}
+
+.notice-category {
+  font-weight: bold;
+}
+
+.announcement {
+  border-left: 5px solid #007bff;
+}
+
+.event {
+  border-left: 5px solid #28a745;
+}
+
+.deadline {
+  border-left: 5px solid #dc3545;
+}
