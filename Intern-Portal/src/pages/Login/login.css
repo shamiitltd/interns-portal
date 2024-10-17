@@ -90,9 +90,9 @@ body, html {
 
 .toggle-password {
     position: absolute;
-    right: -140px;
-    top: 40%;
-    transform: translateY(-50%);
+    right: 14px;
+    top: 20%;
+    /* transform: translateY(-50%); */
     background: transparent;
     border: none;
     color: #607AFB;

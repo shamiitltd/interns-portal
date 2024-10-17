@@ -64,16 +64,6 @@ function App() {
           element={
             <PrivateRoute>
               <InternDashboard />
-              <button
-          type="button"
-          className="theme-toggle-btn"
-          onClick={toggleTheme}
-        >
-          <img
-            className="theme-icon"
-            src={theme === LIGHT_THEME ? SunIcon : MoonIcon}
-          />
-        </button>
             </PrivateRoute>
             
           }
